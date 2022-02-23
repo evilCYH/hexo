@@ -16,18 +16,20 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://gofervor.com/2022/02/23/22222222222222222222/index.html">
+    <meta name="description" content="前言假期制定了不少plan，因为这事那事…….总之，因为lan，我的假期plan就剩个p了   杂谈建站服务器买的腾讯云的，后来感觉果然不如买国外的，之后域名图方便也是从腾讯云下的dnspod买的，审核过了之后差不多就能配置着用了，大概花了半个月左右的时间。2021年底理论上就能用了。 但是下了个简单的wordpress就没咋玩了，除了当时玩log4j漏洞jndi注入用了一下vps。(虽然不知道原">
+<meta property="og:type" content="article">
+<meta property="og:title" content="first blog of 地板砖b1ub1u">
+<meta property="og:url" content="http://gofervor.com/2022/02/23/first%20blog%20of%20%E5%9C%B0%E6%9D%BF%E7%A0%96b1ub1u/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="前言假期制定了不少plan，因为这事那事…….总之，因为lan，我的假期plan就剩个p了   杂谈建站服务器买的腾讯云的，后来感觉果然不如买国外的，之后域名图方便也是从腾讯云下的dnspod买的，审核过了之后差不多就能配置着用了，大概花了半个月左右的时间。2021年底理论上就能用了。 但是下了个简单的wordpress就没咋玩了，除了当时玩log4j漏洞jndi注入用了一下vps。(虽然不知道原">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-02-23T07:17:10.990Z">
-<meta property="article:modified_time" content="2022-02-23T07:17:10.990Z">
+<meta property="article:published_time" content="2022-02-23T10:23:30.000Z">
+<meta property="article:modified_time" content="2022-02-23T14:22:04.336Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>Hexo</title>
+  <title>first blog of 地板砖b1ub1u - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -173,7 +175,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="">
+            <span class="h2" id="subtitle" title="first blog of 地板砖b1ub1u">
               
             </span>
 
@@ -183,8 +185,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-02-23 15:17" pubdate>
-        2022年2月23日 下午
+      <time datetime="2022-02-23 18:23" pubdate>
+        2022年2月23日 晚上
       </time>
     </span>
   
@@ -194,7 +196,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      0 字
+      868 字
     </span>
   
 
@@ -203,7 +205,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1 分钟
+      8 分钟
     </span>
   
 
@@ -232,10 +234,24 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">first blog of 地板砖b1ub1u</h1>
             
             <div class="markdown-body">
-              
+              <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><em><strong>假期制定了不少plan，因为这事那事…….<br/>总之，因为lan，我的假期plan就剩个p了</strong></em></p>
+<br/>
+
+<h1 id="杂谈"><a href="#杂谈" class="headerlink" title="杂谈"></a>杂谈</h1><h2 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h2><p>服务器买的腾讯云的，后来感觉果然不如买国外的，之后域名图方便也是从腾讯云下的dnspod买的，审核过了之后差不多就能配置着用了，大概花了半个月左右的时间。2021年底理论上就能用了。</p>
+<p>但是下了个简单的wordpress就没咋玩了，除了当时玩log4j漏洞jndi注入用了一下vps。(虽然不知道原理，就纯粹瞎跟着做<br/></p>
+<p>最近看hexo框架的博客很好看哎，就想着换一下，之后写点东西都更这上面。没想到是个天坑…..好看是好看，部署比较麻烦，本地的源码先pull到github上，github再导到服务器上。网上用自动化部署github actions(这个对于没有个人域名和vps的比较友好，我感觉有点鸡肋)，Travis CI(自动化集成的，最近几年在收费，绝对不可能用的)，Netlify(相当于免费的CI，但我没搞成功，啧，从github建二级域名的时候一直failed)，服务器建个js脚本配合pm2跟github的webhooks(我也失败了)，宝塔webhook v1.2(这个最离谱，配合github的webhooks能成功链接，但response都是让登录宝塔界面，根本到不了宝塔webhook软件页面)。</p>
+<p>最后我只能手动启动宝塔webhook，焯！</p>
+<h2 id="CTF"><a href="#CTF" class="headerlink" title="CTF"></a>CTF</h2><p>我准备最近先把sqli-labs过完，把sql注入学透了再看看其他的，别省赛的常规题都做不出来，所以之后应该先更sqli的wp了，应该会写的很细致</p>
+<h2 id="学业"><a href="#学业" class="headerlink" title="学业"></a>学业</h2><p>虽然但是，我也很痛心的感觉到gpa和ctf似乎不能共存，太难了，不知道这学期绩点会咋样，全是难的要死的课。</p>
+<h2 id="以后"><a href="#以后" class="headerlink" title="以后"></a>以后</h2><p>不过我个人还是偏喜欢安全方面多一些的，不太喜欢学校信管的课程，但java，数据结构，操作系统，计网啥的也得好好学啊，刘神tql。之后想把web学学之后等大三后或者大四看看二进制安全，学学pwn</p>
+<br/>
+
+<hr>
+<p><em>ps：对了，hexo只能用 md文件部署，真无语。一点也不熟悉，之前db让用 md写 java实验报告都是抄的，哪有自己写markdown</em></p>
+
             </div>
             <hr>
             <div>
@@ -258,12 +274,6 @@
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/2022/02/22/hackmepls/">
-                        <span class="hidden-mobile"></span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
