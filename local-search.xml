@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>JetBrain系列产品free激活至2099年</title>
+    <link href="/2022/02/25/JetBrain%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81free%E6%BF%80%E6%B4%BB%E8%87%B32099%E5%B9%B4/"/>
+    <url>/2022/02/25/JetBrain%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81free%E6%BF%80%E6%B4%BB%E8%87%B32099%E5%B9%B4/</url>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>个人为了学习和研究软件内含的设计思想和原理可进行尝试。<br/><br><strong>仅用于学习交流</strong>，严禁用做商业用途，否则自行承担后果。<br/><br>本文以IntelliJ IDEA 专业版2.4为例，2022年3.0及以上版本可行性不明。<br/><br><strong>本文所使用的工具在文末链接可取。</strong></p><br/><h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>官方下载网站：<a href="https://www.jetbrains.com/idea/download/">JetBrain官网</a><br/><br>进入网站<br><img src="https://gitee.com/chen-yuhong6/image-bed/raw/master/img/1.png"><br><br/><br><br/><br>Other versions-选择2.4-windows版本下载<br><img src="https://gitee.com/chen-yuhong6/image-bed/raw/master/img/2.png"><br><br/><br><br/></p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>双击setup程序，这里可以先把这两项勾选上，之后一路Next<br><img src="https://gitee.com/chen-yuhong6/image-bed/raw/master/img/3.png"></p><h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><p>下载好后运行程序<br><br/></p><h3 id="Activation-界面"><a href="#Activation-界面" class="headerlink" title="Activation 界面"></a>Activation 界面</h3><p><img src="https://gitee.com/chen-yuhong6/image-bed/raw/master/img/4.png"><br><br/><br><br/><br>第一次进入要先选择Start trial————Log In to JetBrains Account<br/><br><img src="https://gitee.com/chen-yuhong6/image-bed/raw/master/img/5.png"><br><br/><br><br/><br>进入官网注册&#x2F;登录账号，再返回，就变成这个页面了<br><img src="https://gitee.com/chen-yuhong6/image-bed/raw/master/img/6.png"><br><br/><br><br/><br>不用勾选，点击Start Trial<br><img src="https://gitee.com/chen-yuhong6/image-bed/raw/master/img/7.png"><br>这里可以看到有效期为1个月，到2022年的3月15日，直接Continue</p><h3 id="编译器-界面"><a href="#编译器-界面" class="headerlink" title="编译器 界面"></a>编译器 界面</h3><p>找到齿轮符号，点击 Edit Custom VM Options…<br><img src="https://gitee.com/chen-yuhong6/image-bed/raw/master/img/8.png"><br><br/><br><br/><br>在这个文档的最后添加一句话：<br>-javaagent:D:_App\IntelliJ IDEA 2021.2.4\FakeUser.jar<br><img src="https://gitee.com/chen-yuhong6/image-bed/raw/master/img/9.png"><br><br/><br><br/></p><p><em>注意，这个FakeUser.jar是复制到你安装目录里去的</em><br/><br><em>这个<code>D:\_App\IntelliJ IDEA 2021.2.4</code>也就是我的安装路径</em><br>保存后关闭程序</p><h3 id="重新运行"><a href="#重新运行" class="headerlink" title="重新运行"></a>重新运行</h3><p>重新运行程序<br/><br>这次选择Activate IntelliJ IDEA————Activation code————输入密钥————点击Activate<br>就可以激活。<br><img src="https://gitee.com/chen-yuhong6/image-bed/raw/master/img/10.png"><br><br/><br><br/><br>可以看到激活至2099年12月31日了<br><img src="https://gitee.com/chen-yuhong6/image-bed/raw/master/img/11.png"><br><br/><br><br/><br>如果在进入页面没有点Edit Custom VM Options…<br/><br>可以在选择一个project进入后，点Help————Edit Custom VM Options…<br><img src="https://gitee.com/chen-yuhong6/image-bed/raw/master/img/12.png"><br><br/><br><br/></p><h1 id="jar包及激活码获取"><a href="#jar包及激活码获取" class="headerlink" title="jar包及激活码获取"></a>jar包及激活码获取</h1><p>链接：<a href="https://pan.baidu.com/s/1hUwKh89N4mNSAzVlbg45zQ">https://pan.baidu.com/s/1hUwKh89N4mNSAzVlbg45zQ</a><br>提取码：2333</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>hexo结合宝塔webhook实现自动化部署</title>
     <link href="/2022/02/24/hexo%E7%BB%93%E5%90%88%E5%AE%9D%E5%A1%94webhook%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/"/>
     <url>/2022/02/24/hexo%E7%BB%93%E5%90%88%E5%AE%9D%E5%A1%94webhook%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</url>
