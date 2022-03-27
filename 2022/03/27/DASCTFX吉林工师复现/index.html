@@ -19,14 +19,14 @@
     <meta name="description" content="前言上个暑期末解除CTF，上学期打的比赛报名了连签到都做不出来看见buu上还有题目环境，重新看看，不一样的感觉哎这个比赛misc题占大半，果然是魔法世界 迷路的魔法少女源码直接给出来了分析一下这段代码，学到新的php知识还是蛮多的 123456789101112131415161718192021222324252627282930&lt;?phphighlight_file(&amp;#x27;inde">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DASCTF Oct X 吉林工师 题目复现">
-<meta property="og:url" content="http://gofervor.com/2022/03/27/articleee/index.html">
+<meta property="og:url" content="http://gofervor.com/2022/03/27/DASCTFX%E5%90%89%E6%9E%97%E5%B7%A5%E5%B8%88%E5%A4%8D%E7%8E%B0/index.html">
 <meta property="og:site_name" content="b1ub1u的小站">
 <meta property="og:description" content="前言上个暑期末解除CTF，上学期打的比赛报名了连签到都做不出来看见buu上还有题目环境，重新看看，不一样的感觉哎这个比赛misc题占大半，果然是魔法世界 迷路的魔法少女源码直接给出来了分析一下这段代码，学到新的php知识还是蛮多的 123456789101112131415161718192021222324252627282930&lt;?phphighlight_file(&amp;#x27;inde">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://81.70.101.23:11111/i/2022/03/27/z0osag_0.png">
 <meta property="og:image" content="http://81.70.101.23:11111/i/2022/03/27/10o01hk_0.png">
 <meta property="article:published_time" content="2022-03-27T13:11:44.000Z">
-<meta property="article:modified_time" content="2022-03-27T14:18:37.165Z">
+<meta property="article:modified_time" content="2022-03-27T14:23:55.287Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://81.70.101.23:11111/i/2022/03/27/z0osag_0.png">
@@ -203,7 +203,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.8k 字
+      1.9k 字
     </span>
   
 
@@ -212,7 +212,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      15 分钟
+      16 分钟
     </span>
   
 
@@ -251,7 +251,8 @@
 <p>先假想传个参?attrid[]&#x3D;1&amp;attrvalue[]&#x3D;a<br>放入第二段代码，得出的$attrstr应该为’arrar(“1”&#x3D;&gt;”a”);’</p>
 <p>如果想进行命令执行比如phpinfo，传入attrid[]&#x3D;1&amp;attrvalue[]&#x3D;phpinfo()是不行的，这点我不太确定，因为用php在线执行网站可以，自己搭的环境不行<br>没太搞懂，个人理解可能是得出的$attrstr为’arrar(“1”&#x3D;&gt;”phpinfo()”);’中的phpinfo是带双引号的，不能被执行</p>
 <p>所以要绕过这个双引号就要像sql注入一样前后各闭合去注入<br>payload: <code>?attrid[]=1&amp;attrvalue[]=1&quot;,&quot;2&quot;=&gt;phpinfo(),&quot;3&quot;=&gt;&quot;1</code><br>此时得到的$attrsr为 array(“1”&#x3D;&gt;”1”,”2”&#x3D;&gt;phpinfo(),”3”&#x3D;&gt;”1”); 是可行的<br>flag可以在phpinfo里搜到</p>
-<p>ps：想通过sysytem这种函数 ls找目录+cat查内容 在这题找不到，因为flag不在html或者根目录<br>不过可以用system+grep递归搜索字符串<code>flag&#123;</code><br>payload: <code>?attrid[]=1&amp;attrvalue[]=1&quot;,&quot;2&quot;=&gt;system(&#39;grep -r &quot;flag&#123;&quot; /&#39;),&quot;3&quot;=&gt;&quot;1</code><br><img src="http://81.70.101.23:11111/i/2022/03/27/10o01hk_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>想通过sysytem这种函数 ls找目录+cat查内容 在这题找不到，因为flag不在html或者根目录<br>不过可以用system+grep递归搜索字符串<code>flag&#123;</code><br>payload: <code>?attrid[]=1&amp;attrvalue[]=1&quot;,&quot;2&quot;=&gt;system(&#39;grep -r &quot;flag&#123;&quot; /&#39;),&quot;3&quot;=&gt;&quot;1</code><br><img src="http://81.70.101.23:11111/i/2022/03/27/10o01hk_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>ps：上网找资料的时候发现这个string2array漏洞是两年前cms上比较火的漏洞，主要是没有考虑用户是否能控制这个字符串，被eval将字符串以代码执行形成漏洞</p>
 
             </div>
             <hr>
