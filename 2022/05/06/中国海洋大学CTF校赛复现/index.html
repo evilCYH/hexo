@@ -1,0 +1,486 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.jpg">
+  <link rel="icon" href="/img/favicon.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="前言太菜了太菜了呜呜 Web-你比香农都牛逼Web小游戏，直接在调试器里翻翻文件，看到jsfuck代码 在控制台运行一下即可 flag: flag{blue-whalerdle} Web-very old php game确实是个old题目var_dump($$a)，只能对其中$a赋值，要保证$($a)还有意义一种方法是猜测flag是存储在$flag变量中，传入a&#x3D;flag尝试 另一种方">
+<meta property="og:type" content="article">
+<meta property="og:title" content="中国海洋大学CTF校赛复现">
+<meta property="og:url" content="http://gofervor.com/2022/05/06/%E4%B8%AD%E5%9B%BD%E6%B5%B7%E6%B4%8B%E5%A4%A7%E5%AD%A6CTF%E6%A0%A1%E8%B5%9B%E5%A4%8D%E7%8E%B0/index.html">
+<meta property="og:site_name" content="b1ub1u的小站">
+<meta property="og:description" content="前言太菜了太菜了呜呜 Web-你比香农都牛逼Web小游戏，直接在调试器里翻翻文件，看到jsfuck代码 在控制台运行一下即可 flag: flag{blue-whalerdle} Web-very old php game确实是个old题目var_dump($$a)，只能对其中$a赋值，要保证$($a)还有意义一种方法是猜测flag是存储在$flag变量中，传入a&#x3D;flag尝试 另一种方">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/06/ezqp3n_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/06/ezqpmk_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/06/f6sbvb_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/06/f6se5h_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/06/f6se86_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/06/fjvt2s_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/06/fjvqwx_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/06/fjvr64_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/06/re5r7s_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/06/sn9btd_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/06/3.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/06/ssap3n_0.png">
+<meta property="article:published_time" content="2022-05-06T01:02:38.000Z">
+<meta property="article:modified_time" content="2022-05-09T09:44:39.857Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://81.70.101.23:11111/i/2022/05/06/ezqp3n_0.png">
+  
+  
+  <title>中国海洋大学CTF校赛复现 - b1ub1u的小站</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/shubiao.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"gofervor.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>biubiu~</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.jpeg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="中国海洋大学CTF校赛复现">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-05-06 09:02" pubdate>
+        2022年5月6日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.6k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      14 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">中国海洋大学CTF校赛复现</h1>
+            
+            <div class="markdown-body">
+              <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>太菜了太菜了呜呜</p>
+<h2 id="Web-你比香农都牛逼"><a href="#Web-你比香农都牛逼" class="headerlink" title="Web-你比香农都牛逼"></a>Web-你比香农都牛逼</h2><p>Web小游戏，直接在调试器里翻翻文件，看到jsfuck代码<br><img src="http://81.70.101.23:11111/i/2022/05/06/ezqp3n_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>在控制台运行一下即可<br><img src="http://81.70.101.23:11111/i/2022/05/06/ezqpmk_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>flag: flag{blue-whalerdle}</p>
+<h2 id="Web-very-old-php-game"><a href="#Web-very-old-php-game" class="headerlink" title="Web-very old php game"></a>Web-very old php game</h2><p><img src="http://81.70.101.23:11111/i/2022/05/06/f6sbvb_0.png" srcset="/img/loading.gif" lazyload><br>确实是个old题目<br>var_dump($$a)，只能对其中$a赋值，要保证$($a)还有意义<br>一种方法是猜测flag是存储在$flag变量中，传入a&#x3D;flag尝试<br><img src="http://81.70.101.23:11111/i/2022/05/06/f6se5h_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>另一种方法是利用PHP中的超全局变量$GLOBALS<br>$GLOBALS包含了当前作用域所有的变量<br><img src="http://81.70.101.23:11111/i/2022/05/06/f6se86_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>flag: flag{8VMa12Gts84z1QXgYh9K}</p>
+<h2 id="Web-old-php-game"><a href="#Web-old-php-game" class="headerlink" title="Web-old php game"></a>Web-old php game</h2><p>同样是个old题目，原题是bugku的闪电十六鞭<br>打开题目可以看到”Click here”的按钮<br><img src="http://81.70.101.23:11111/i/2022/05/06/fjvt2s_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>点击后发生跳转并追加了一个新的参数flag&#x3D;return’xxxxx’;<br><img src="http://81.70.101.23:11111/i/2022/05/06/fjvqwx_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>审计一下代码，<br>1、首先是!isset($_GET[‘flag’])要求有flag参数传入<br>2、然后strlen($_GET[‘flag’]) !&#x3D; strlen($exam)要求长度要等于$exam，这里$exam的成分是return+<code>&#39;</code>+sha1+<code>&#39;</code>+<code>;</code>一共49位，即要求flag也是49位<br>3、preg_match(‘&#x2F;<code>|&quot;|\.|\\\\|\(|\)|\[|\]|_|flag|echo|print|require|include|die|exit/is&#39;, $_GET[&#39;flag&#39;])就是一些绕过 4、eval($_GET[&#39;flag&#39;]) === sha1($flag)这段代码除了满足if判断能</code>echo $flag;&#96;以外，eval本身也能任意执行，比如$_GET[‘flag’]里有输出的代码，即使不等于sha1($flag)，也能输出</p>
+<p>由于过滤了echo等打印flag的函数，所以要用php中短标签来绕过<code>&lt;?=123?&gt;</code>，相当于<code>&lt;?echo 123;?&gt;</code>，开始还想用超全局变量$GLOBALS，但是这里短标签相当于echo，array类型的数组echo不出来，数组只能var_dump，所以只能拼接flag这四个字符</p>
+<p>payload：<code>?flag=$a=fla1;$a&#123;3&#125;=g;111111111111111111111;?&gt;&lt;?=$$a;?&gt;</code><br>这里的111111111111111111111放哪都不影响<br><img src="http://81.70.101.23:11111/i/2022/05/06/fjvr64_0.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="Web-Baby-Unserialize"><a href="#Web-Baby-Unserialize" class="headerlink" title="Web-Baby Unserialize"></a>Web-Baby Unserialize</h2><p>看起来很’简单’的题……现在有两种解<br>一种是<code>fast destruct</code>，很新的漏洞，这种方法应该是预期解，因为本题php版本很高<br>一种是对<code>= &amp;</code>的利用，反正我也不会，呜呜呜呜呜</p>
+<h3 id="解法一：fast-destruct"><a href="#解法一：fast-destruct" class="headerlink" title="解法一：fast destruct"></a>解法一：fast destruct</h3><p><img src="http://81.70.101.23:11111/i/2022/05/06/re5r7s_0.png" srcset="/img/loading.gif" lazyload><br>首先审计一下代码，这里的__wakeup魔术方法并不难绕过，但是__destruct方法里输出的还是$i_am_not_flag，而flag的值是传给了$i_am_flag</p>
+<h3 id="解法二：利用-x3D-amp-绕过"><a href="#解法二：利用-x3D-amp-绕过" class="headerlink" title="解法二：利用&#x3D;&amp;绕过"></a>解法二：利用&#x3D;&amp;绕过</h3><h2 id="Web-企业级项目实训"><a href="#Web-企业级项目实训" class="headerlink" title="Web-企业级项目实训"></a>Web-企业级项目实训</h2><p>目前不是完全理解本题目<br>原理是在访问&#x2F;auth&#x2F;login时Content-Type存在log4j2漏洞<br>利用JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar就可以打<br><img src="http://81.70.101.23:11111/i/2022/05/06/sn9btd_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>参考文章：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_52091458/article/details/121980780">Le1a师傅的文章</a></p>
+<h2 id="Misc-Checkin"><a href="#Misc-Checkin" class="headerlink" title="Misc-Checkin"></a>Misc-Checkin</h2><p>现在签到我都做不出来了…..<br><img src="http://81.70.101.23:11111/i/2022/05/06/3.png" srcset="/img/loading.gif" lazyload></p>
+<p>用在线工具将海报的二维码扫出来就有flag了，我个大傻子一直在对整张图片搞搞搞<br><img src="http://81.70.101.23:11111/i/2022/05/06/ssap3n_0.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="Misc-bitjungle"><a href="#Misc-bitjungle" class="headerlink" title="Misc-bitjungle"></a>Misc-bitjungle</h2><p>给的两张图片，那应该就是盲水印了<br><code>python3 bwm3.py decode bitjungle.png bitjungle2.png ex.png --alpha 20</code></p>
+<p>得到一张图片，里面有一个文件的路径<br>下载下来binwalk出一个压缩包<br>压缩包末尾的十六进制转字符是嗷呜嗷呜兽音加密，解密就是压缩包密码<br>解压出来就是flag</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/05/09/buu%E5%88%B7%E9%A2%98-5.9/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">buu刷题-5.9</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/04/18/neuqcsa-%E5%9B%9B%E6%9C%88%E6%9C%88%E8%B5%9B/">
+                        <span class="hidden-mobile">neuqcsa-四月月赛</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>hexo</span></a> <i class="iconfont icon-love"></i> <a href="http://www.gofervor.com/" target="_blank" rel="nofollow noopener"><span>b1ub1u</span></a> 
+  </div>
+  
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        皖ICP备2021017950号
+      </a>
+    </span>
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<script src="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/DynamicRibbon.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/DynamicLine.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/snowflake.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/containsWord.min.js"></script>
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/nico.model.json"},"display":{"position":"right","width":300,"height":600},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>

